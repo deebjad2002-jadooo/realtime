@@ -125,6 +125,19 @@ class _RealChatState extends State<RealChat> {
     _controller.clear();
   }
 
+  void sendMessage1() {
+    final text = _controller.text.trim();
+    if (text.isEmpty) return;
+    final data = jsonEncode({
+      'type': 'message', 'text': text, 'from': 'App',
+
+      //userid
+      //DDDDDDD
+    });
+    channel.sink.add(data);
+    _controller.clear();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
