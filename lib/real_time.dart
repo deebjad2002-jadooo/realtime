@@ -119,6 +119,7 @@ class _RealChatState extends State<RealChat> {
       'type': 'message', 'text': text, 'from': 'App',
 
       //userid
+      //DDDDDDD
     });
     channel.sink.add(data);
     _controller.clear();
